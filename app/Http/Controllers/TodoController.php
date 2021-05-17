@@ -22,7 +22,7 @@ class TodoController extends Controller
         $param = [
             "list" => $request->list
         ];
-        DB::table('todolists')->insert($param);
+        DB::table('todolists')->update($param);
         return response()->json([
             'message' => 'User updated successfully',
             'data' => $param

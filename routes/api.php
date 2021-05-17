@@ -13,7 +13,7 @@ use App\Http\Controllers\TodoController;
 |
 */
 
-Route::get('/', [TodoController::class, 'get']);
-Route::post('/', [TodoController::class, 'post']);
-Route::put('/', [TodoController::class, 'put']);
-Route::delete('/', [TodoController::class, 'delete']);
+Route::get('/list', [TodoController::class, 'get']);
+Route::post('/list', [TodoController::class, 'post']);
+Route::put('/list', [TodoController::class, 'put']);
+Route::delete('/list', [TodoController::class, 'delete']);
