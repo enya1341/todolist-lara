@@ -8,6 +8,7 @@ class TodoController extends Controller
 {
     public function post(Request $request)
     {
+        echo "<script>console.log( 'test' );</script>";
         $param = [
             "list" => $request->list
         ];
