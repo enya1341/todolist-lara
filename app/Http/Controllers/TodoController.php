@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todolist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class TodoController extends Controller
@@ -37,14 +38,10 @@ class TodoController extends Controller
     }
     public function get(Request $request)
     {
-        if ($request->has('list')) {
-            $items = DB::table('todolists')->where('list', $request->list)->get();
+        $list = Todolist::all();
         return response()->json([
-            'message' => 'User got successfully',
-            'data' => $items
+            'message' => 'User get successfully',
+            'data' => $list
         ], 200);
-        } else {
-            return response()->json(['status' => 'not found'], 404);
-        }
     }
 }
