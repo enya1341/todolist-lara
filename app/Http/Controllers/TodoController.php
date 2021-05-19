@@ -23,7 +23,7 @@ class TodoController extends Controller
         $param = [
             "list" => $request->list
         ];
-        DB::table('todolists')->update($param);
+        DB::table('todolists')->where('id',$request->id)->update($param);
         return response()->json([
             'message' => 'User updated successfully',
             'data' => $param
@@ -31,7 +31,7 @@ class TodoController extends Controller
     }
     public function delete(Request $request)
     {
-        DB::table('todolists')->where('list', $request->list)->delete();
+        DB::table('todolists')->where('id', $request->id)->delete();
         return response()->json([
             'message' => 'Like deleted successfully',
         ], 200);
