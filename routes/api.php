@@ -15,5 +15,5 @@ use App\Http\Controllers\TodoController;
 
 Route::get('/list', [TodoController::class,'get']);
 Route::post('/list', [TodoController::class, 'post']);
-Route::put('/list', [TodoController::class, 'put']);
-Route::delete('/list', [TodoController::class, 'delete']);
+Route::put('/list/{id}', [TodoController::class, 'put']);
+Route::delete('/list/{id}', [TodoController::class, 'delete']);
