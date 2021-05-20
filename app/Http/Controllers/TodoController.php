@@ -18,6 +18,7 @@ class TodoController extends Controller
             'data' => $param
         ], 200);
     }
+
     public function put(Request $request)
     {
         $param = [
@@ -29,6 +30,7 @@ class TodoController extends Controller
             'data' => $param
         ], 200);
     }
+
     public function delete(Request $request)
     {
         DB::table('todolists')->where('id', $request->id)->delete();
@@ -36,6 +38,7 @@ class TodoController extends Controller
             'message' => 'Like deleted successfully',
         ], 200);
     }
+    
     public function get(Request $request)
     {
         $list = Todolist::all();

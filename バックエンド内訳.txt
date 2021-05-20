@@ -1,0 +1,24 @@
+バックエンド
+
+使用言語やツール
+・PHP
+・Laravel
+・MySQL
+・Heroku
+
+
+API一覧
+・/api/list GET todoリストのデータ取得
+・/api/list POST todoリストのデータ挿入
+・/api/list/{id} PUT todoリストのデータ更新
+・/api/list/{id} DELETE todoリストのデータ削除
+
+
+TABLE欄
+・todolists
+id
+list:ここにtodoリストでの内容を書く
+created_at
+updated_at
+
+
